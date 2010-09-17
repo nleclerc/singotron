@@ -1,0 +1,13 @@
+# mots anglais
+# 
+# le fichier doit être encodé en UTF-8.
+# vous pouvez mettre le texte /entre slash/ pour qu'il apparaisse en italique.
+# le pipe (|) sert à faire un retours à la ligne (lorsque plusieurs mots sont valides).
+# # en début de ligne permet de faire un commentaire et les lignes vides sont ignorées.
+
+umbrella
+(to) speak
+sky
+brain
+/a colour/
+luggage|baggage

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Singotron</title>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	var frenchWords = [];
+	var englishWords = [];
+
+	function randOrd() {
+		return (Math.round(Math.random())-0.5);
+	}
+	
+	function randomizeArray(array) {
+		return array.concat().sort(randOrd);
+	}
+
+	var wordHistory =  new Array();
+	
+	var frenchPipe = new Array();
+	var englishPipe = new Array();
+	
+	function resetPipes() {
+		frenchPipe = randomizeArray(frenchWords);
+		englishPipe = randomizeArray(englishWords);
+	}
+	
+	function nextWords() {
+		if (frenchPipe.length == 0 || englishPipe.length == 0)
+			resetPipes();
+		
+		var currentWords = {fr:frenchPipe.shift(), en:englishPipe.shift()};
+		wordHistory.push(currentWords);
+		setWords(currentWords);
+	}
+	
+	function setWords(words) {
+		$("#wordFr").html(formatWord(words.fr));
+		$("#wordEn").html(formatWord(words.en));
+	}
+	
+	function formatWord(word) {
+		if (word.charAt(0)=="/" && word.charAt(word.length-1) =="/")
+			word = "<i>"+word.substring(1,word.length-1)+"</i>"
+		
+		word = word.replace(/\|/g,"<br>");
+		
+		return word.toUpperCase();
+	}
+	
+	function loadWords(fileUrl, targetArray, callback) {
+		$.get(fileUrl, function(data) {
+			var tokens = data.split("\n");
+			
+			for (var i=0; i<tokens.length; i++) {
+				var token = tokens[i];
+				if (token.length > 0 && token.charAt(0) != "#")
+					targetArray.push(token)
+			}
+			
+			if (callback)
+				callback();
+		});
+	}
+	
+	$(document).ready(function() {
+		loadWords("words-fr.txt", frenchWords, function(){
+			loadWords("words-en.txt", englishWords, function(){
+				nextWords();
+			});
+		});
+	});
+</script>
+
+<link rel="stylesheet" href="common.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="mobile.css" type="text/css" media="only screen and (min-device-width:241px)" />
+<link rel="stylesheet" href="smallmobile.css" type="text/css" media="only screen and (max-device-width:240px)" />
+
+<script type="text/javascript" src="/ga.js"></script>
+</head>
+
+<body>
+
+<div id="wordFr">&nbsp;</div>
+<div id="spacer"><hr id="separator"/></div>
+<div id="wordEn">&nbsp;</div>
+
+<input id="nextButton" type="button" value="Suivant" onclick="nextWords()" />
+
+</body>
+</html>

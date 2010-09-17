@@ -1,0 +1,47 @@
+body, html {
+	background-color: black;
+	font-family: sans-serif;
+	color: white;
+	height: 100%;
+	margin: 0;
+}
+
+#separator {
+	height: 2px;
+	width: 100px;
+	
+	position: absolute;
+	
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -1px;
+}
+
+#spacer {
+	vertical-align: middle;
+	
+	height: 10%;
+	margin: 0;
+}
+
+input {
+	position: absolute;
+	bottom: 0;
+}
+
+#wordFr, #wordEn {
+	text-align: center;
+	height: 45%;
+	line-height: 90%;
+/*
+	background-color: green;
+*/
+}
+/*
+#wordEn {
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+*/
