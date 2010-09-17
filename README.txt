@@ -12,7 +12,7 @@ de ne pouvoir jouer faute d'avoir pensé à prendre le jeu.
 
 J'ai donc décidé d'en faire une version web qui pourrait être utilisée depuis un téléphone mobile.
 
-Par respect pour l'auteur, Sylvie Barc, je ne fournis pas de liste de mot avec le moteur.
+Par respect pour l'auteur, Sylvie Barc (http://www.sylviebarc.net/), je ne fournis pas de liste de mot avec le moteur.
 C'est à vous de retranscrire votre copie du jeu.
 
 
