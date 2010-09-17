@@ -7,6 +7,9 @@
 ==================================================================
 
 
+Note: Ce projet n'a aucun lien officiel avec le jeu Shabadabada ou Sylvie Barc.
+
+
 Singotron est né de la frustration de joueurs de Shabadabada (http://www.shabadabada.com/)
 de ne pouvoir jouer faute d'avoir pensé à prendre le jeu.
 
