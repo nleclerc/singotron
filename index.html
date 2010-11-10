@@ -4,6 +4,11 @@
 <head>
 <meta charset="utf-8">
 <title>Singotron</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 <script type="text/javascript">
 	var frenchWords = [];
@@ -83,9 +88,11 @@
 
 <body>
 
-<div id="wordFr">&nbsp;</div>
-<div id="spacer"><hr id="separator"/></div>
-<div id="wordEn">&nbsp;</div>
+<table width="100%" height="100%" border="0" padding="0">
+<tr><td id="wordFr" valign="bottom">&nbsp;</td></tr>
+<tr><td id="spacer"><hr id="separator"/></td></tr>
+<tr><td id="wordEn" valign="top">&nbsp;</td></tr>
+</table>
 
 <input id="nextButton" type="button" value="Suivant" onclick="nextWords()" />
 

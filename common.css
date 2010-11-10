@@ -25,23 +25,14 @@ body, html {
 	margin: 0;
 }
 
-input {
+#nextButton {
 	position: absolute;
 	bottom: 0;
+	right: 0;
 }
 
 #wordFr, #wordEn {
 	text-align: center;
 	height: 45%;
 	line-height: 90%;
-/*
-	background-color: green;
-*/
 }
-/*
-#wordEn {
-	-webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-*/
